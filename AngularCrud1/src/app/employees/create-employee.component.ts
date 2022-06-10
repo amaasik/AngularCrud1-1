@@ -13,16 +13,16 @@ export class CreateEmployeeComponent implements OnInit {
 previewPhoto=false;
 
 employee: Employee = {
-    id: null,
-    name: null,
-    gender: null,
-    email: null,
-    phoneNumber: null,
-    contactPreference: null,
-    dateOfBirth: null,
-    department: null,
-    isActive: null,
-    photoPath: null,
+    id: 0,
+    fullname:'',
+    gender: '',
+    email: '',
+    phoneNumber: 0,
+    contactPreference: '',
+    dateOfBirth: new Date(),
+    department: '',
+    isActive: false,
+    photoPath: '',
 };
 
   departments: Department[] = [
@@ -54,7 +54,7 @@ employee: Employee = {
   }
 
   saveEmployee(employeeForm: NgForm): void {
-    console.log(employeeForm);
+    console.log(employeeForm.value);
   }
 
 }
